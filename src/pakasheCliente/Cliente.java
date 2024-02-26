@@ -1,4 +1,4 @@
-package pacashe;
+package pakasheCliente;
 
 public class Cliente {
     public static final int PUERTO = 2000;
