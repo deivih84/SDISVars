@@ -1,4 +1,4 @@
-package pakasheCliente;
+package ejemplosServerCliente.cliente;
 
 public class Cliente {
     public static final int PUERTO = 2000;

@@ -1,4 +1,4 @@
-package pakasheServidor;
+package ejemplosServerCliente.servidor;
 
 import java.io.IOException;
 
@@ -9,11 +9,10 @@ public class ServidorMultihenebrado {
         try (java.net.ServerSocket servidor = new java.net.ServerSocket(PUERTO)) {
             while (true) {
                 try {
-                    System.out.println("----Servidor esperando al cliente ----");
+                    System.out.println("----ejemplosServerCliente.Servidor esperando al cliente ----");
                     java.net.Socket sock = servidor.accept(); // ojito ! sin try-with-rc
                     java.io.BufferedReader inred = new java.io.BufferedReader(new java.io.InputStreamReader(sock.getInputStream()));
-                    java.io.PrintStream outred =
-                            new java.io.PrintStream(sock.getOutputStream());
+                    java.io.PrintStream outred = new java.io.PrintStream(sock.getOutputStream());
                     Runnable sirviente = () -> {
                         try {
                             String linea;

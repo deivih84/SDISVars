@@ -1,4 +1,4 @@
-package pakasheServidor
+package ejemplosServerCliente.servidor
 
 import java.io.BufferedReader
 import java.io.IOException
@@ -16,7 +16,7 @@ object ServidorMultihenebradoKT {
             ServerSocket(PUERTO).use { servidor ->
                 while (true) {
                     try {
-                        println("----Servidor esperando al cliente ----")
+                        println("----ejemplosServerCliente.Servidor esperando al cliente ----")
                         val sock = servidor.accept() // ojito ! sin try-with-rc
                         val inred = BufferedReader(InputStreamReader(sock.getInputStream()))
                         val outred = PrintStream(sock.getOutputStream())
